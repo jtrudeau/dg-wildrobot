@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#fff8e6"/>
+  <rect x="60" y="60" width="1080" height="520" rx="22" fill="#f4e1b7" stroke="#2c221b" stroke-width="8"/>
+  <g font-family="Arial, sans-serif" font-weight="700" fill="#2c221b">
+    <text x="600" y="140" font-size="52" text-anchor="middle">Home Materials Board</text>
+    <rect x="120" y="190" width="460" height="320" rx="14" fill="#fff7e5" stroke="#2c221b" stroke-width="6"/>
+    <text x="350" y="250" font-size="34" text-anchor="middle">Essentials</text>
+    <text x="150" y="300" font-size="30">• Cardboard</text>
+    <text x="150" y="345" font-size="30">• Tape</text>
+    <text x="150" y="390" font-size="30">• Markers/Paint</text>
+    <text x="150" y="435" font-size="30">• Foil/Paper</text>
+    <rect x="620" y="190" width="460" height="320" rx="14" fill="#fff7e5" stroke="#2c221b" stroke-width="6"/>
+    <text x="850" y="250" font-size="34" text-anchor="middle">Optional Add-Ons</text>
+    <text x="650" y="300" font-size="30">• Tubes, caps, straws</text>
+    <text x="650" y="345" font-size="30">• Fabric and stickers</text>
+    <text x="650" y="390" font-size="30">• Pipe cleaners</text>
+    <text x="650" y="435" font-size="30">• Recycled containers</text>
+  </g>
+</svg>
+
