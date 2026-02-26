@@ -47,8 +47,8 @@ export default function HomePage() {
           Dunrae Gardens Wild Robot Build Hub
         </h1>
         <p className="mt-4 max-w-3xl text-xl font-semibold leading-relaxed">
-          Students are moving from imagining to creating as designers and little engineers.
-          The goal is to build the personality of their robot, not to copy the drawing exactly.
+          Students are moving from imagining to creating as designers and young engineers.
+          The goal is to build the personality of their robot, not to copy their drawing designs exactly.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/sessions/home-build" className="btn btn-rust">
