@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const basePath = process.env.BASE_PATH ?? "/dg-wildrobot";
+
 type SessionStep = {
   title: string;
   studentActions: string[];
@@ -157,6 +159,32 @@ export default function HomeBuildSessionPage() {
                 <li key={action}>{action}</li>
               ))}
             </ul>
+            {index === 0 ? (
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <figure className="border-2 border-[var(--wild-bark)] bg-[#fff8e8] p-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${basePath}/images/reimagining/wild-robot-drawing.JPG`}
+                    alt="Student wild robot drawing"
+                    className="h-auto w-full border-2 border-[var(--wild-bark)]"
+                  />
+                  <figcaption className="mt-2 text-sm font-black uppercase tracking-[0.08em] text-[var(--wild-bark)]">
+                    Original Drawing
+                  </figcaption>
+                </figure>
+                <figure className="border-2 border-[var(--wild-bark)] bg-[#fff8e8] p-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${basePath}/images/reimagining/wild-robot-crab-reimagined.png`}
+                    alt="Reimagined wild robot design"
+                    className="h-auto w-full border-2 border-[var(--wild-bark)]"
+                  />
+                  <figcaption className="mt-2 text-sm font-black uppercase tracking-[0.08em] text-[var(--wild-bark)]">
+                    Reimagined Robot
+                  </figcaption>
+                </figure>
+              </div>
+            ) : null}
             <details className="parent-notes mt-4">
               <summary>Parent or Guardian Notes</summary>
               <ul className="checklist mt-3 space-y-2 text-base font-semibold">

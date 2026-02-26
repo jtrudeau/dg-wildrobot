@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const videoFile = "video/update-march.mp4";
+
 const milestones = [
   {
     date: "March 13, 2026",
@@ -158,8 +160,18 @@ export default function HomePage() {
           This video quickly recaps what students already accomplished, shows a few robot examples,
           and outlines how the goal is creativity and developing STEAM skills, not perfection.
         </p>
-        <div className="mt-4 border-2 border-dashed border-[var(--wild-bark)] bg-[#fff9ea] p-4 text-base font-semibold">
-          Coming soon...
+        <div className="mt-4">
+          <video
+            controls
+            preload="metadata"
+            className="w-full border-2 border-[var(--wild-bark)] bg-black"
+          >
+            <source src={videoFile} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="mt-3 text-sm font-semibold leading-relaxed">
+            Video file path: <code>public/{videoFile}</code>
+          </p>
         </div>
       </section>
     </main>
