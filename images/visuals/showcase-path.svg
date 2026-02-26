@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#fff8e6"/>
+  <rect x="70" y="70" width="1060" height="500" rx="24" fill="#f2ddb0" stroke="#2c221b" stroke-width="8"/>
+  <g font-family="Arial, sans-serif" font-weight="700" fill="#2c221b">
+    <text x="600" y="150" font-size="52" text-anchor="middle">March Timeline</text>
+    <rect x="160" y="230" width="380" height="220" rx="16" fill="#fff8e7" stroke="#2c221b" stroke-width="6"/>
+    <text x="350" y="300" font-size="34" text-anchor="middle">March 13</text>
+    <text x="350" y="350" font-size="30" text-anchor="middle">Bring Robot</text>
+    <text x="350" y="390" font-size="26" text-anchor="middle">Done or in progress</text>
+    <rect x="660" y="230" width="380" height="220" rx="16" fill="#fff8e7" stroke="#2c221b" stroke-width="6"/>
+    <text x="850" y="300" font-size="34" text-anchor="middle">March 27</text>
+    <text x="850" y="350" font-size="30" text-anchor="middle">Showcase Day</text>
+    <text x="850" y="390" font-size="26" text-anchor="middle">Robot performance</text>
+  </g>
+  <g stroke="#5f7f2a" stroke-width="12" stroke-linecap="round">
+    <path d="M560 340h80"/>
+    <path d="M630 325l20 15-20 15"/>
+  </g>
+</svg>
+
