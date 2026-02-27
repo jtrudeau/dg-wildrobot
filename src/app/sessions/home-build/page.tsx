@@ -25,7 +25,7 @@ const sessionSteps: SessionStep[] = [
     title: "Gather Home Materials",
     studentActions: [
       "Start with some essentials: cardboard (boxes, cereal boxes, shoe boxes), tape (masking, packing, duct, or painter tape), aluminum foil or paper for texture, and markers/crayons/paint.",
-      "Optional add-ons: bottle caps, lids, buttons, straws, cardboard tubes, egg cartons, cans, old plastic food containers, thread, toothpicks, popsicle sticks, old markers, pipe cleaners, twist ties, rubber bands, fabric scraps, stickers, or colored tape.",
+      "Optional add-ons: bottle caps, lids, buttons, straws, cardboard tubes, egg cartons, cans, old plastic food containers, thread, toothpicks, popsicle sticks, old markers, LEGO, DUPLO, Tinkertoys, other toy-set pieces, pipe cleaners, twist ties, rubber bands, fabric scraps, stickers, or colored tape.",
       "You can also use any other materials you think will help your design.",
       "Use what you already have at home first. No purchase is required.",
     ],
@@ -80,14 +80,16 @@ const inspirationIdeas = [
       "Small boxes (cereal, tea, snack) and medium boxes (tissue, shoe box).",
       "Cardboard tubes for arms, legs, or sensor towers.",
       "Paper bags or folded cardboard panels for shells and add-on parts.",
+      "LEGO, DUPLO, or Tinkertoy pieces can be used as strong add-on parts if they are attached securely.",
     ],
   },
   {
     title: "Surface and Personality Ideas",
     items: [
       "Aluminum foil for metallic texture.",
-      "Paper panels for control buttons and labels.",
+      "Paper or cardboard panels can show symbols, control displays, labels, or screens.",
       "Drawn features with markers/crayons/paint instead of tiny loose pieces.",
+      "Use fabric scraps, felt, ribbon, or old clothing pieces to add a cape, scarf, patch, or uniform detail that matches your robot's personality.",
     ],
   },
   {
@@ -96,14 +98,15 @@ const inspirationIdeas = [
       "Straws and yarn/thread as decorative cable pathways.",
       "Popsicle sticks or cardboard strips for hinges and joints.",
       "Tape-based tabs that can flex during testing and revisions.",
+      "Keep heavier parts low on the body so your robot stays balanced when the platform moves.",
     ],
   },
   {
-    title: "Story and Mission Add-Ons",
+    title: "Spirit, Motion, and Showcase Ideas",
     items: [
-      "A robot name plate and mission card.",
-      "A symbol that shows what your robot helps with.",
-      "A one-sentence story that explains where your robot works.",
+      "Use your design notes: who is your robot, where is it, and what is it doing?",
+      "Think about your robot's movement style (careful, bold, quick, circling). Add features that match that motion.",
+      "Think of a one short sentence you can share in class. Example: My robot is Moss Scout, it helps by finding safe paths for animals, and it moves like a curious crab.",
     ],
   },
 ];
@@ -210,9 +213,23 @@ export default function HomeBuildSessionPage() {
                 {group.title}
               </h3>
               <ul className="checklist mt-2 space-y-2 text-base font-semibold">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
+                {group.items.map((item, itemIndex) => {
+                  const isShowcaseExample =
+                    group.title === "Spirit, Motion, and Showcase Ideas" && itemIndex === 2;
+
+                  if (isShowcaseExample) {
+                    const [beforeExample, exampleText] = item.split("Example: ");
+
+                    return (
+                      <li key={item}>
+                        {beforeExample}
+                        Example: <em>{exampleText}</em>
+                      </li>
+                    );
+                  }
+
+                  return <li key={item}>{item}</li>;
+                })}
               </ul>
             </article>
           ))}

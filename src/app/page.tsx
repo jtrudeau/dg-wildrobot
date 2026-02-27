@@ -29,6 +29,7 @@ const optionalMaterials = [
   "Bottle caps, lids, buttons, or straws",
   "Cardboard tubes or egg cartons",
   "Thread, toothpicks, popsicle sticks, or old markers",
+  "LEGO, DUPLO, Tinkertoys, or pieces from other toy sets you already have at home",
   "Pipe cleaners, twist ties, or rubber bands",
   "Fabric scraps, stickers, or colored tape",
 ];
