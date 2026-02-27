@@ -220,7 +220,7 @@ export default function HomePage() {
             Your browser does not support the video tag.
           </video>
           <p className="mt-3 text-sm font-semibold leading-relaxed">
-            Video file path: <code>public/{videoFile}</code>
+            If the video does not load, open it directly: <a href={videoFile} className="underline">video link</a>
           </p>
         </div>
       </section>
