@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const basePath = process.env.BASE_PATH ?? "/dg-wildrobot";
-const videoFile = "video/update-march.mp4";
+const videoFile = "video/update-march-mobile.mp4";
 
 const milestones = [
   {
@@ -213,6 +213,7 @@ export default function HomePage() {
         <div className="mt-4">
           <video
             controls
+            playsInline
             preload="metadata"
             className="w-full border-2 border-[var(--wild-bark)] bg-black"
           >
