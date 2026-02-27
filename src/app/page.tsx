@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+const basePath = process.env.BASE_PATH ?? "/dg-wildrobot";
 const videoFile = "video/update-march.mp4";
 
 const milestones = [
@@ -38,6 +39,29 @@ const learningPath = [
   "MIRROR WITH AI",
   "BUILD AT HOME",
   "ROBOT SHOWCASE",
+];
+
+const inspirationExamples = [
+  {
+    src: "robot-1.jpeg",
+    title: "Homemade Example 1",
+    detail: "A robot built from simple home and recycled materials. Wheels are made from cardboard and old tinkertoys. The eyes are attached to the plastic food container using flexible pipe cleaners.",
+  },
+  {
+    src: "robot-2.jpeg",
+    title: "Homemade Example 2",
+    detail: "Different shapes and small details can make a robot feel unique without needing expensive parts. The robot is built from carboard. It has old CDs for wheels and a smiley face in permanent marker.",
+  },
+  {
+    src: "robot-3.jpeg",
+    title: "Mindstorms Platform",
+    detail: "This is a full robotics platform example. On such a platform you build by following the instructions. Here, you get to determine how your robot is put together. We will learn how to program for motion in another activity.",
+  },
+  {
+    src: "robot-potato.jpeg",
+    title: "Character Inspiration",
+    detail: "This is a Mr. Potato Head style example. You get to mix and match features to create a robot character with your own style. Maybe you have a favorite toy you want to incorporate or use for inspiration?",
+  },
 ];
 
 export default function HomePage() {
@@ -152,6 +176,31 @@ export default function HomePage() {
         >
           Open Wild Robot App
         </a>
+      </section>
+
+      <section className="mt-8 panel p-6">
+        <h2 className="font-display text-3xl text-[var(--wild-bark)]">Examples for Inspiration</h2>
+        <p className="mt-3 text-base font-semibold leading-relaxed">
+          These examples are here to spark ideas. 
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {inspirationExamples.map((example) => (
+            <figure key={example.src} className="border-2 border-[var(--wild-bark)] bg-[#fff8e8] p-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${basePath}/images/${example.src}`}
+                alt={example.title}
+                className="h-auto w-full border-2 border-[var(--wild-bark)]"
+              />
+              <figcaption className="mt-2">
+                <p className="text-sm font-black uppercase tracking-[0.08em] text-[var(--wild-bark)]">
+                  {example.title}
+                </p>
+                <p className="mt-1 text-base font-semibold leading-relaxed">{example.detail}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </section>
 
       <section id="video" className="mt-8 panel p-6">
